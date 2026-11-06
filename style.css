@@ -363,6 +363,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.3rem;
+        align-items: stretch;
     max-width: 1150px;
     margin: auto;
 }
