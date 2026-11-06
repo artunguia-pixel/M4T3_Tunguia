@@ -656,3 +656,76 @@ footer {
         scroll-behavior: auto;
     }
 }
+/* Fix 1: Offset sections so sticky header does not cover section titles on anchor click */
+section,
+main > div {
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Base Styling */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d86c8a; /* Pink header shade */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Mobile Nav: Hidden by default on small screens */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+/* Toggle state via JS class */
+.nav-menu.is-active {
+  display: flex;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Breakpoint 760px+: Switch back to desktop row layout */
+@media (min-width: 760px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger icon on tablet/desktop */
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+    gap: 1.5rem;
+  }
+}
