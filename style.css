@@ -627,7 +627,19 @@ footer {
         padding-left: 12%;
     }
 }
+/* The hero content needs more space at this width. */
 
+@media (min-width: 900px) {
+    .hero {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    .hero-design {
+        width: 280px;
+        height: 280px;
+    }
+}
 /* REDUCED-MOTION ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
